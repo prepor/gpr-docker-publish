@@ -23,6 +23,10 @@ inputs:
     description: attempt to use last image as the cache
     require: false
     default: false
+  buildparams:
+    description: additional build params
+    require: false
+    default: ''
 outputs:
   IMAGE_SHA_NAME:
     description: name of the Docker Image including the tag
