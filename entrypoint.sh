@@ -43,8 +43,7 @@ shortSHA=$(echo "${GITHUB_SHA}" | cut -c1-12)
 BASE_NAME="docker.pkg.github.com/${GITHUB_REPOSITORY}/${INPUT_IMAGE_NAME}"
 SHA_NAME="${BASE_NAME}:${shortSHA}"
 
-# Add Arguments For Caching
-BUILDPARAMS=""
+BUILDPARAMS=$INPUT_BUILDPARAMS
 if [ "${INPUT_CACHE}" == "true" ]; then
    # try to pull container if exists
    if docker pull ${BASE_NAME} 2>/dev/null; then
