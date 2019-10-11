@@ -23,7 +23,7 @@ inputs:
     description: attempt to use last image as the cache
     require: false
     default: false
-  buildparams:
+  build_params:
     description: additional build params
     require: false
     default: ''
